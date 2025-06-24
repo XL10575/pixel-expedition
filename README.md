@@ -4,7 +4,7 @@
 
 ## 🎮 在线游玩
 
-**[点击这里游玩](https://你的用户名.github.io/仓库名称/)**
+**[点击这里游玩](https://xl10575.github.io/pixel-expedition/)**
 
 ## 🚀 游戏特色
 
@@ -77,8 +77,8 @@ Game_Project/
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/你的用户名/仓库名称.git
-cd 仓库名称
+git clone https://github.com/XL10575/pixel-expedition.git
+cd pixel-expedition
 ```
 
 2. 启动本地服务器
