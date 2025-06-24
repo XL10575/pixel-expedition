@@ -1,0 +1,144 @@
+/* 像素远征 - 游戏样式表 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#gameCanvas {
+    display: block;
+    background: #000;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    width: 100%;
+    height: 100%;
+}
+
+#gameInfo {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#gameInfo h1 {
+    font-size: 2.5em;
+    color: #00ff41;
+    text-shadow: 2px 2px 4px rgba(0, 255, 65, 0.5);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#gameInfo p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+#controls {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+#controls h3 {
+    color: #ff6b35;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#controls p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+/* 游戏状态样式 */
+.game-playing #gameInfo {
+    display: none;
+}
+
+.game-menu #gameCanvas {
+    opacity: 0.7;
+}
+
+/* HUD 样式 */
+.hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 反应挑战样式 */
+.challenge-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border: 3px solid #00ff41;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    z-index: 200;
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+    #gameContainer {
+        padding: 10px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+    
+    #gameInfo h1 {
+        font-size: 2em;
+    }
+}
+
+/* 像素风格按钮效果 */
+.pixel-button {
+    background: #333;
+    border: 2px solid #666;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pixel-button:hover {
+    background: #555;
+    border-color: #999;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+} 
